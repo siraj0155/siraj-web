@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+} */
 
 @theme inline {
   --color-background: var(--background);
@@ -13,14 +13,98 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  /* :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-  }
+  } */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
+
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideIn-image {
+  animation: slideIn 1s ease forwards;
+  animation-delay: 1s; 
+}
+.animate-slideIn {
+  animation: slideIn 1s ease forwards;
+  animation-delay: 1s; 
+}
+
+.animate-slideIn-text {
+  animation: slideIn 1s ease forwards;
+  animation-delay: 1s; 
+}
+
+@keyframes slideInText {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes underlineDraw {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.animate-slideIn-text {
+  animation: slideInText 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.relative-text {
+  position: relative;
+  display: inline-block;
+}
+
+.relative-text::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px; 
+  background-color: currentColor;
+  width: 0;
+  opacity: 0;
+  animation: underlineDraw 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+.stroked-text {
+  color: transparent;
+  -webkit-text-stroke: 1px black; /* outline */
+  position: relative;
+  animation: slideInText 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+
+
+
+
