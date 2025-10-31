@@ -1,21 +1,22 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   return (
     <>
       <div className="h-full flex relative px-20">
-        <div className="flex flex-col cursor-pointer gap-2 absolute justify-center h-full text-xl">
-          <p>About Me</p>
+        {/* <div className="flex flex-col cursor-pointer gap-2 absolute justify-center h-full text-xl">
+          <Link href={'/about'}>About Me</Link>
           <p>Works</p>
           <p>Contact</p>
-        </div>
-        <div className="absolute top-10 opacity-0 animate-slideIn-text ">
+        </div> */}
+        {/* <div className="absolute top-10 opacity-0 animate-slideIn-text ">
           <p className="text-4xl stroked-text opacity-0 animate-slideIn-text">
             SIRAJ_WEB
           </p>
-        </div>
+        </div> */}
         <div className="flex w-full items-center justify-center h-full ">
           <TypeAnimation
             sequence={["Software Developer", 2000, "", 500]}
