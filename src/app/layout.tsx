@@ -23,16 +23,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${rufina.className} h-full w-full bg-amber-100`}>
-      <body
-        className="h-full w-full px-20"
-      >
+    <html lang="en" className={`${rufina.className} h-screen w-screen bg-amber-100`}>
+      <body className="h-screen w-screen overflow-hidden px-28 flex flex-col">
         <Header />
-        <div className="flex h-full">
+        <div className="flex flex-1 h-full">
           <Sidebar />
-          {children}
+          <main className="flex-1 overflow-auto">
+            {children}
+          </main>
         </div>
-
         {/* <Footer /> */}
       </body>
     </html>
