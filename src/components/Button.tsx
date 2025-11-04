@@ -13,7 +13,7 @@ type AnchorProps = CommonProps & AnchorHTMLAttributes<HTMLAnchorElement> & { hre
 export default function Button(props: ButtonProps | AnchorProps) {
   const { children, className, variant = "solid" } = props as CommonProps;
   const base =
-    "inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors";
+    "inline-flex items-center justify-center  px-4 py-2 text-sm font-medium transition-colors";
   const solid = "bg-black text-white hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/85";
   const outline =
     "border border-black/20 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/10";

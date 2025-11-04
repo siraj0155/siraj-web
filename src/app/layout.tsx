@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${rufina.className} h-screen w-screen bg-amber-100`}>
+    <html lang="en" className={`${rufina.className} h-screen w-screen bg-[#FAFAFA]`}>
       <body className="h-screen w-screen overflow-hidden px-28 flex flex-col">
         <Header />
         <div className="flex flex-1 h-full">

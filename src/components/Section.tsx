@@ -8,7 +8,7 @@ type Props = {
 
 export default function Section({ title, subtitle, children }: Props) {
   return (
-    <section className="mx-auto max-w-5xl px-4 py-10 sm:py-14">
+    <section className="mx-auto max-w-5xl px-4 py-0 sm:py-0">
       {(title || subtitle) && (
         <div className="mb-6">
           {title && (
