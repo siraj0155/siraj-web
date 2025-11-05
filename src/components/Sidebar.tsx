@@ -15,7 +15,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <nav className="flex flex-col gap-3 justify-center h-full text-xl">
+    <nav className="flex max-lg:hidden flex-col gap-3 justify-end pb-20 h-full text-xl ">
       {navItems.map((item) => {
         const isActive =
           pathname === item.href ||

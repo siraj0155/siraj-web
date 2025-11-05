@@ -1,6 +1,5 @@
 "use client";
 
-import Button from "@/components/Button";
 import emailjs from "@emailjs/browser";
 import Section from "@/components/Section";
 import React from "react";
@@ -8,28 +7,52 @@ import React from "react";
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [message, setMessage] = React.useState("");
+  const [isDownloading, setIsDownloading] = React.useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("hello");
     setIsSubmitting(true);
     setMessage("");
-
     try {
       await emailjs.sendForm(
-        "service_fjigmzh", // Get from EmailJS dashboard
-        "YOUR_TEMPLATE_ID", // Get from EmailJS dashboard
+        "service_fjigmzh",
+        "template_c5u7om8",
         e.currentTarget,
-        "YOUR_PUBLIC_KEY" // Get from EmailJS dashboard
+        "buurOf4XoiuKOQIfy"
       );
       setMessage("Message sent successfully!");
       (e.target as HTMLFormElement).reset();
+      setTimeout(() => {
+        setMessage("");
+      }, 3000);
     } catch (error) {
       setMessage("Failed to send message. Please try again.");
+      setTimeout(() => {
+        setMessage("");
+      }, 3000);
     } finally {
       setIsSubmitting(false);
     }
   };
+
+  const handleDownload = async () => {
+    setIsDownloading(true);
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 10));
+      const link = document.createElement("a");
+      link.href = "/siraj-software-developer1.pdf";
+      link.download = "SIRAJUDHEEN_CV.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setTimeout(() => {
+        setIsDownloading(false);
+      }, 500);
+    } catch (error) {
+      console.error("Download failed:", error);
+    }
+  };
+
   return (
     <Section
       title="Contact Me"
@@ -56,7 +79,8 @@ export default function ContactPage() {
               </div>
 
               <input
-                name="name"
+                name="email"
+                type="email"
                 required
                 className="mt-1 w-full border-0 border-b border-black/30 dark:border-white/30 
              bg-transparent px-0 py-2 outline-none 
@@ -64,7 +88,6 @@ export default function ContactPage() {
                 placeholder="you@example.com"
               />
             </div>
-
             <textarea
               name="message"
               required
@@ -74,8 +97,17 @@ export default function ContactPage() {
              focus:border-b-2  transition-colors duration-300"
               placeholder="Message"
             />
-            <Button type="submit">Send message</Button>
+            <button
+              className="bg-black cursor-pointer text-white px-2 p-1"
+              type="submit"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Sending..." : "Send Message"}
+            </button>{" "}
           </form>
+          <div className="text-green-500">
+            {message && <p className="mt-4">{message}</p>}
+          </div>
         </div>
         <div className="w-full md:col-span-5 h-full items-center flex flex-col justify-center space-y-5">
           <div className=" border px-4 py-2 items-center flex gap-2 w-full">
@@ -112,27 +144,63 @@ export default function ContactPage() {
           </div>
           <button
             type="button"
+            onClick={handleDownload}
+            disabled={isDownloading}
             className="border cursor-pointer px-4 py-2 items-center bg-black  text-white  justify-center flex gap-2 w-full"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M5 3h14a2 2 0 0 1 2 2v14c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2m3 14h8v-2H8zm8-7h-2.5V7h-3v3H8l4 4z"
-              />
-            </svg>
-            <div>
-              <p>Download CV</p>
-            </div>
+            {isDownloading ? (
+              <>
+                {/* Loading Spinner */}
+                <svg
+                  className="animate-spin"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
+                <div>
+                  <p>Downloading...</p>
+                </div>
+              </>
+            ) : (
+              <>
+                {/* Download Icon */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M5 3h14a2 2 0 0 1 2 2v14c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2m3 14h8v-2H8zm8-7h-2.5V7h-3v3H8l4 4z"
+                  />
+                </svg>
+                <div>
+                  <p>Download CV</p>
+                </div>
+              </>
+            )}
           </button>
         </div>
       </div>
       <div className="mt-40">
-      <hr  className="p-2 border-gray-400"/>
+        <hr className="p-2 border-gray-400" />
         <div className="text-center flex  items-center  justify-start gap-10">
           <h1 className="font-bold text-3xl">Follow Me</h1>
           <div className="flex gap-4 text-sm justify-center">

@@ -1,4 +1,3 @@
-import Button from "@/components/Button";
 import Section from "@/components/Section";
 
 const projects = [
@@ -28,7 +27,7 @@ export default function ProjectsPage() {
             <h3 className="font-medium">{p.title}</h3>
             <p className="mt-2 text-sm opacity-80">{p.description}</p>
             <div className="mt-4">
-              <Button variant="outline" href={p.href}>View details</Button>
+              <button>View details</button>
             </div>
           </div>
         ))}
