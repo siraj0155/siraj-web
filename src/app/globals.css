@@ -4,17 +4,20 @@
 @source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
 @custom-variant dark (&:is(.dark *));
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-} */
+html,
+body {
+  height: 100%;
+}
+
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-momo: var(--font-momo); /* Add this line */
 }
+
 
 @media (prefers-color-scheme: dark) {
   /* :root {
@@ -23,6 +26,12 @@
   } */
 }
 
+.font-caveat {
+  font-family: var(--font-caveat), cursive;
+}
+
+
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -30,6 +39,8 @@ body {
     "Times New Roman", serif, system-ui, -apple-system, Segoe UI, Roboto,
     Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
+
+
 
 @keyframes slideIn {
   0% {
@@ -67,6 +78,7 @@ body {
   animation: slideInFromRight 0.5s ease-out forwards;
   animation-delay: 4s;
 }
+
 
 @keyframes slideInText {
   0% {
@@ -133,3 +145,6 @@ body {
 .animate-spin-slow {
   animation: spin-slow 10s linear infinite;
 }
+
+
+

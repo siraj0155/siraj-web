@@ -58,7 +58,7 @@ export default function ContactPage() {
       title="Contact Me"
       subtitle="Let's build something great together."
     >
-      <div className="grid grid-cols-2 mt-20 md:grid-cols-12 h-full w-full gap-20">
+      <div className="grid  grid-cols-1 lg:grid-cols-12  mt-10 md:mt-20 md:grid-cols-2 h-full w-full gap-20">
         <div className="md:col-span-7 w-full">
           <form
             onSubmit={handleSubmit}
@@ -201,8 +201,8 @@ export default function ContactPage() {
       </div>
       <div className="mt-40">
         <hr className="p-2 border-gray-400" />
-        <div className="text-center flex  items-center  justify-start gap-10">
-          <h1 className="font-bold text-3xl">Follow Me</h1>
+        <div className="text-center flex  items-center  justify-between md:justify-start gap-10">
+          <h1 className="font-bold text-xl md:text-3xl">Follow Me</h1>
           <div className="flex gap-4 text-sm justify-center">
             <a
               className="underline"

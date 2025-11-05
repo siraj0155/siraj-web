@@ -5,9 +5,9 @@ import { TypeAnimation } from "react-type-animation";
 export default function Home() {
   return (
     <>
-      <div className="h-full  flex flex-col justify-center w-full items-center px-20 max-lg:px-0">
+      <div className="h-full flex flex-col justify-center w-full items-center px-20 max-lg:px-0">
         <div className="flex justify-between items-center h-full w-full opacity-0 animate-slideIn">
-          <div className="flex-1 flex justify-center mt-20">
+          <div className="flex-1 flex justify-center mt-28">
             <div className="relative">
               <div className="bg-gradient-to-b from-[#c8cece] to-[#FAFAFA] w-[280px] h-60 rounded-t-full"></div>
               <Image

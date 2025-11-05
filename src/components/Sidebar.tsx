@@ -15,7 +15,10 @@ export default function Sidebar() {
   ];
 
   return (
-    <nav className="flex max-lg:hidden flex-col gap-3 justify-end pb-20 h-full text-xl ">
+    <nav
+      className="flex max-lg:hidden flex-col gap-3 justify-center  text-xl 
+                 h-screen"
+    >
       {navItems.map((item) => {
         const isActive =
           pathname === item.href ||
@@ -25,12 +28,9 @@ export default function Sidebar() {
           <Link
             key={item.href}
             href={item.href}
-            className={`relative transition-all duration-300 ease-in-out transform 
-              ${
-                isActive
-                  ? "text-4xl scale-110"
-                  : ""
-              }`}
+            className={`relative transition-all duration-300 ease-in-out transform ${
+              isActive ? "text-4xl scale-110" : ""
+            }`}
           >
             {item.label}
           </Link>
