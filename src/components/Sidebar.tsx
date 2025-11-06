@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -15,10 +15,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <nav
-      className="flex max-lg:hidden flex-col gap-3 justify-center  text-xl 
-                 h-screen"
-    >
+    <nav className="fixed h-full w-40 flex flex-col gap-3 justify-center items-center text-xl max-lg:hidden z-50">
       {navItems.map((item) => {
         const isActive =
           pathname === item.href ||

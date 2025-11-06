@@ -18,7 +18,6 @@ const caveat = Caveat({
   display: "swap",
 });
 
-
 export const metadata: Metadata = {
   title: "Sirajudheen | Software Developer",
   description:
@@ -31,20 +30,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-  <html lang="en" className={`${rufina.variable} ${caveat.variable} h-screen`}>
-  <body className="h-screen w-screen bg-red-800 flex flex-col px-20 max-lg:px-5">
-    <Providers>
-      <Header />
-      <div className="flex flex-1 h-full">
-        <Sidebar />
-        <main className="flex-1 overflow-auto animate-slideIn opacity-0">
-          {children}
-        </main>
-      </div>
-    </Providers>
-  </body>
-</html>
-
-
+    <html lang="en" className={`${rufina.variable} ${caveat.variable}`}>
+      <body className="min-h-screen container bg-white text-black">
+        <Providers>
+          <Header />
+          <Sidebar />
+          <main className="md:ml-40! ">
+            <div className="container mx-auto">{children}</div>
+          </main>
+        </Providers>
+      </body>
+    </html>
   );
 }

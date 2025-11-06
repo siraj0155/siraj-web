@@ -199,9 +199,10 @@ export default function ContactPage() {
           </button>
         </div>
       </div>
-      <div className="mt-40">
+
+      <div className="mt-20">
         <hr className="p-2 border-gray-400" />
-        <div className="text-center flex  items-center  justify-between md:justify-start gap-10">
+        <div className="flex items-center justify-between md:justify-start gap-10 min-h-[80px]">
           <h1 className="font-bold text-xl md:text-3xl">Follow Me</h1>
           <div className="flex gap-4 text-sm justify-center">
             <a
