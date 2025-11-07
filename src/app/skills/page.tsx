@@ -381,7 +381,7 @@ export default function SkillsPage() {
           {devOps.map((skill) => (
             <div
               key={skill.id}
-              className="inline-flex items-center  justify-center font-semibold rounded-xl border border-black/10 dark:border-white/10 px-4 py-2 text-sm whitespace-nowrap"
+              className="inline-flex items-center  justify-center rounded-xl border border-black/10 dark:border-white/10 px-4 py-2 text-sm whitespace-nowrap"
             >
               {skill.logo}
               <span className="ml-2">{skill.skill}</span>
