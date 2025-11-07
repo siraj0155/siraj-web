@@ -1,8 +1,10 @@
+"use client";
 import Section from "@/components/Section";
-import { div } from "framer-motion/client";
 import Image from "next/image";
+import React from "react";
 
 export default function AboutPage() {
+  const [isHovered, setIsHovered] = React.useState(false);
   return (
     <Section title="About" subtitle="A quick intro and background.">
       <div className=" grid grid-cols-1 md:grid-cols-2 justify-evenly items-center w-full gap-10 md:gap-20 lg:gap-28">
@@ -26,18 +28,27 @@ export default function AboutPage() {
             performance, maintainability, and scalability.
           </p>
         </div>
-        <div className="relative w-[300px] h-[400px] overflow-hidden group  shadow-lg">
+        <div
+          className="relative w-[300px] h-[400px] overflow-hidden group shadow-lg rounded-lg"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          onTouchStart={() => setIsHovered(!isHovered)}
+        >
           <Image
             src="/image.png"
             alt="Profile"
             fill
-            className="object-cover transition-transform duration-700 group-hover:-translate-y-full"
+            className={`object-cover transition-transform duration-700 ease-out ${
+              isHovered ? "-translate-y-full" : "translate-y-0"
+            }`}
           />
           <Image
             src="/home-image.jpeg"
             alt="Profile Hover"
             fill
-            className="object-cover translate-y-full transition-transform duration-700 group-hover:translate-y-0"
+            className={`object-cover transition-transform duration-700 ease-out ${
+              isHovered ? "translate-y-0" : "translate-y-full"
+            }`}
           />
         </div>
       </div>

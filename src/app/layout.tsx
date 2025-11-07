@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Caveat, Monomaniac_One, Rufina } from "next/font/google";
+import { Caveat, Rufina } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";

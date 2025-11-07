@@ -49,7 +49,7 @@ export default function ContactPage() {
         setIsDownloading(false);
       }, 500);
     } catch (error) {
-      console.error("Download failed:", error);
+      console.error(error);
     }
   };
 

@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <div className="h-full flex flex-col justify-center w-full items-center px-20 max-lg:px-0">
-        <div className="flex justify-between items-center h-full w-full opacity-0 animate-slideIn">
+        <div className="flex justify-between  items-center h-full w-full opacity-0 animate-slideIn">
           <div className="flex-1 flex justify-center mt-28">
             <div className="relative">
               <div className="bg-gradient-to-b from-[#c8cece] to-[#FAFAFA] w-[280px] h-60 rounded-t-full"></div>
@@ -19,12 +19,12 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="flex flex-col max-lg:hidden  justify-evenly h-full opacity-0 animate-slideIn-home-media">
-            <p className="cursor-pointer">
+          <div className="flex flex-col max-lg:hidden  gap-10 justify-evenly h-full opacity-0 animate-slideIn-home-media">
+            <p>
               {" "}
               <a
                 className="underline"
-                href="https://github.com/"
+                href="https://github.com/siraj0155"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -55,7 +55,7 @@ export default function Home() {
             <p>
               <a
                 className="underline"
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/sirajudheen-u/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -82,7 +82,7 @@ export default function Home() {
               {" "}
               <a
                 className="underline"
-                href="https://www.linkedin.com/"
+                href="https://www.instagram.com/__sira_j?igsh=NWc3YXY1MW82dmRr"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -101,28 +101,37 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <p className="text-5xl max-lg:text-3xl max-lg:me-0  lg:me-5 font-bold py-4 opacity-0 animate-slideIn">
+        <p className="text-5xl max-lg:text-3xl max-lg:me-0 lg:me-5 font-bold py-2 opacity-0 animate-slideIn">
           SIRAJUDHEEN
         </p>
-        <div className="flex w-full items-start justify-center h-full ">
-          <TypeAnimation
-            sequence={["Software Developer", 2000, "", 500]}
-            wrapper="h1"
-            speed={50}
-            className="text-2xl max-lg:text-lg opacity-0 animate-slideIn"
-            repeat={Infinity}
-            cursor={false}
-          />
+        <div className=" flex w-full justify-center items-start h-full">
+          <div className="flex flex-col items-center justify-start min-h-[3rem] z-50">
+            <TypeAnimation
+              sequence={["Software Developer", 2000, "\u00A0", 500]}
+              wrapper="h1"
+              speed={50}
+              className="text-2xl max-lg:text-lg opacity-0 animate-slideIn"
+              repeat={Infinity}
+              cursor={false}
+            />
+          </div>
           <div className="absolute top-0 h-full pointer-events-none opacity-0 animate-slideIn-bg-svg">
-            <img src="/home-group.svg" alt="" className="h-full" />
+            <Image
+              src="/my-photo.jpg"
+              alt="My Photo"
+              width={300}
+              height={200}
+              className="rounded-lg"
+            />
           </div>
         </div>
-        <div className="flex lg:hidden  justify-center h-full w-full gap-10 opacity-0 animate-slideIn-home-media">
-          <p className="cursor-pointer">
+
+        <div className="flex lg:hidden social-links opacity-0 animate-[fadeIn_1.5s_ease-in_forwards] [animation-delay:0.3s]  mt-10  justify-center  h-full w-full gap-10  ">
+          <p>
             {" "}
             <a
               className="underline"
-              href="https://github.com/"
+              href="https://github.com/siraj0155"
               target="_blank"
               rel="noreferrer"
             >
@@ -153,7 +162,7 @@ export default function Home() {
           <p>
             <a
               className="underline"
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/sirajudheen-u/"
               target="_blank"
               rel="noreferrer"
             >
@@ -180,7 +189,7 @@ export default function Home() {
             {" "}
             <a
               className="underline"
-              href="https://www.linkedin.com/"
+              href="https://www.instagram.com/__sira_j?igsh=NWc3YXY1MW82dmRr"
               target="_blank"
               rel="noreferrer"
             >
