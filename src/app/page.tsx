@@ -6,8 +6,15 @@ export default function Home() {
   return (
     <>
       <div className="h-full flex flex-col justify-center w-full items-center px-20 max-lg:px-0">
+         <Image
+    src="/home-group.svg"
+    alt="Background"
+    fill
+    className="object-cover object-center"
+    priority
+  />
         <div className="flex justify-between  items-center h-full w-full opacity-0 animate-slideIn">
-          <div className="flex-1 flex justify-center mt-28">
+          <div className="flex-1 flex justify-center mt-40">
             <div className="relative">
               <div className="bg-gradient-to-b from-[#c8cece] to-[#FAFAFA] w-[280px] h-60 rounded-t-full"></div>
               <Image
@@ -115,15 +122,7 @@ export default function Home() {
               cursor={false}
             />
           </div>
-          <div className="absolute top-0 h-full pointer-events-none opacity-0 animate-slideIn-bg-svg">
-            <Image
-              src="/my-photo.jpg"
-              alt="My Photo"
-              width={300}
-              height={200}
-              className="rounded-lg"
-            />
-          </div>
+          
         </div>
 
         <div className="flex lg:hidden social-links opacity-0 animate-[fadeIn_1.5s_ease-in_forwards] [animation-delay:0.3s]  mt-10  justify-center  h-full w-full gap-10  ">

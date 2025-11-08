@@ -71,7 +71,7 @@ export default function ProjectsPage() {
 
   return (
     <Section title="Projects" subtitle="My Recent Works">
-      <div className="w-full h-full flex mt-8 md:mt-16 justify-center items-center">
+      <div className="w-full h-full flex mt-14 md:mt-16 justify-center items-center">
         <div className="relative w-full overflow-hidden">
           <div
             className="flex transition-transform ease-out duration-700"
@@ -85,7 +85,7 @@ export default function ProjectsPage() {
                 className="min-w-full md:min-w-1/3 flex justify-center items-center"
               >
                 <div
-                  className="relative group w-full md:w-96 md:aspect-[7/7] aspect-[5/7] shadow-lg rounded-lg overflow-hidden"
+                  className="relative group w-full md:w-96 md:aspect-[4/7] aspect-[5/7] shadow-lg rounded-lg overflow-hidden"
                   onTouchStart={() => handleTouch(slide.id)} 
                 >
                   <Image

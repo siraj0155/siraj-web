@@ -7,7 +7,7 @@ export default function AboutPage() {
   const [isHovered, setIsHovered] = React.useState(false);
   return (
     <Section title="About" subtitle="A quick intro and background.">
-      <div className=" grid grid-cols-1 md:grid-cols-2 justify-evenly items-center w-full gap-10 md:gap-20 lg:gap-28">
+      <div className=" grid grid-cols-1 md:grid-cols-2 justify-evenly max-md:pb-10 items-center w-full gap-10 md:gap-20 lg:gap-28">
         <div className="flex flex-col justify-start h-full space-y-4">
           <div className="bg-black opacity-30 transform skew-y-[-2deg] my-8 text-center py-6 px-5">
             <p className="font-caveat text-gray-400 text-6xl">Hey there!</p>
@@ -23,10 +23,10 @@ export default function AboutPage() {
             combines thoughtful UX with scalable, maintainable code, ensuring
             every project stands the test of time.
           </p>
-          <p>
+          {/* <p>
             My work blends thoughtful UX with solid engineering, with a focus on
             performance, maintainability, and scalability.
-          </p>
+          </p> */}
         </div>
         <div
           className="relative w-[300px] h-[400px] overflow-hidden group shadow-lg rounded-lg"

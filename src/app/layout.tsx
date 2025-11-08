@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import { Providers } from "@/providers/Providers";
+import Loader from "@/components/Loader";
 
 const rufina = Rufina({
   variable: "--font-rufina",
@@ -32,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${rufina.variable} ${caveat.variable}`}>
       <body className="min-h-screen container bg-white text-black">
+        <Loader />
         <Providers>
           <Header />
           <Sidebar />

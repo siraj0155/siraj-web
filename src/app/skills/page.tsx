@@ -389,7 +389,7 @@ export default function SkillsPage() {
           ))}
         </div>
       </div>
-      <div className="skill-animation-4">
+      <div className="skill-animation-4 max-md:pb-10">
         <p className="text-lg font-medium my-5">Languages</p>
         <div className="flex flex-wrap gap-4">
           {Languages.map((lang) => (
