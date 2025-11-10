@@ -35,16 +35,16 @@ export default function AboutPage() {
           onTouchStart={() => setIsHovered(!isHovered)}
         >
           <Image
-            src="/image.png"
-            alt="Profile"
+            src="/siraj2.jpg"
+            alt="siraj-img1"
             fill
             className={`object-cover transition-transform duration-700 ease-out ${
               isHovered ? "-translate-y-full" : "translate-y-0"
             }`}
           />
           <Image
-            src="/home-image.jpeg"
-            alt="Profile Hover"
+            src="/image.png"
+            alt="siraj-img2"
             fill
             className={`object-cover transition-transform duration-700 ease-out ${
               isHovered ? "translate-y-0" : "translate-y-full"
