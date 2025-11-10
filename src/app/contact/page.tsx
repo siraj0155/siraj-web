@@ -207,7 +207,7 @@ export default function ContactPage() {
           <div className="flex gap-4 text-sm justify-center">
             <a
               className="underline"
-              href="https://github.com/"
+              href="https://github.com/siraj0155"
               target="_blank"
               rel="noreferrer"
             >

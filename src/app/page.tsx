@@ -6,15 +6,13 @@ export default function Home() {
   return (
     <>
       <div className="h-full flex flex-col justify-center w-full items-center px-20 max-lg:px-0">
-         <Image
-    src="/home-group.svg"
-    alt="Background"
-    fill
-    // height={100}
-    // width={100}
-    className="object-cover object-center"
-    priority
-  />
+        <Image
+          src="/home-group.svg"
+          alt="Background"
+          fill
+          className="object-cover object-center"
+          priority
+        />
         <div className="flex justify-between  items-center h-full w-full opacity-0 animate-slideIn">
           <div className="flex-1 flex justify-center mt-40">
             <div className="relative">
@@ -124,7 +122,6 @@ export default function Home() {
               cursor={false}
             />
           </div>
-          
         </div>
 
         <div className="flex lg:hidden social-links opacity-0 animate-[fadeIn_1.5s_ease-in_forwards] [animation-delay:0.3s]  mt-10  justify-center  h-full w-full gap-10  ">
