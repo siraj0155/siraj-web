@@ -10,6 +10,8 @@ export default function Home() {
     src="/home-group.svg"
     alt="Background"
     fill
+    // height={100}
+    // width={100}
     className="object-cover object-center"
     priority
   />

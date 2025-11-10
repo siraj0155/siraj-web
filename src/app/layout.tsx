@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${rufina.variable} ${caveat.variable}`}>
-      <body className="min-h-screen container bg-white text-black">
+      <body className=" container bg-white text-black">
         <Loader />
         <Providers>
           <Header />
