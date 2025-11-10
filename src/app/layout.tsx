@@ -20,9 +20,12 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Sirajudheen | Software Developer",
+  title: "Siraj | Software Developer",
   description:
-    "Portfolio of Sirajudheen – building reliable web applications with Next.js.",
+    "Explore the portfolio of Sirajudheen — a passionate web developer specializing in building fast, reliable, and scalable web applications using Next.js, React, and modern web technologies.",
+  icons: {
+    icon: "/siraj-fav.png",
+  },
 };
 
 export default function RootLayout({
