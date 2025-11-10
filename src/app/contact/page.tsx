@@ -236,7 +236,7 @@ export default function ContactPage() {
             </a>
             <a
               className="underline"
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/sirajudheen-u/"
               target="_blank"
               rel="noreferrer"
             >
@@ -260,7 +260,7 @@ export default function ContactPage() {
             </a>
             <a
               className="underline"
-              href="https://www.linkedin.com/"
+              href="https://www.instagram.com/__sira_j?igsh=NWc3YXY1MW82dmRr"
               target="_blank"
               rel="noreferrer"
             >
