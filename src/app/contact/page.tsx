@@ -40,7 +40,7 @@ export default function ContactPage() {
     try {
       await new Promise((resolve) => setTimeout(resolve, 10));
       const link = document.createElement("a");
-      link.href = "/siraj-software-developer1.pdf";
+      link.href = "/siraj-dev.pdf";
       link.download = "SIRAJUDHEEN_CV.pdf";
       document.body.appendChild(link);
       link.click();
