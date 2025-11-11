@@ -124,7 +124,7 @@ export default function ContactPage() {
             </svg>
             <div>
               <a className="mt-2" href="mailto:hello@example.com">
-                hello@example.com
+                ungungalsiraj@gmail.com
               </a>
             </div>
           </div>
