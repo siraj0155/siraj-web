@@ -25,7 +25,7 @@ export default function Sidebar() {
           <Link
             key={item.href}
             href={item.href}
-            className={`relative transition-all duration-300 font-bold ease-in-out transform ${
+            className={`relative transition-all duration-300 font-semibold ease-in-out transform ${
               isActive ? "text-4xl scale-110" : ""
             }`}
           >
